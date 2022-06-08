@@ -1,6 +1,51 @@
 /*stylesheet*/
 
+/*Here is a comment*/
+
+/*
+tiers of cascasding styles
+
+Importance -
+
+1 Transition
+2 !Important
+3 Animation
+4 Normal
+
+Origin -
+website
+user 
+browser
+
+Specificity-
+Inline > ID > Class > Type
+
+Position (From Top to Bottom)
+
+
+*/
+
 body {
-	background-color: orange;
+	background-color: grey;
 	color: black;
+}
+
+h1#Main-Headline {
+	font-size: 48px;
+	color: blueviolet;
+	font-weight: 800;
+}
+
+h1.Main-Headline {
+	font-size: 48px;
+	color: darkred;
+	font-weight: 800;
+}
+
+h1,h2,h3,h4 {
+	margin: 0;
+}
+
+p {
+	color: blue !important;
 }
