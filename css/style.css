@@ -1,6 +1,13 @@
+/*vars*/
+:root {
+	--background-color: #fff;
+	--body-color: #111;
+}
+
+
 body {
-	background-color: #ffffff;
-	color: #333333;
+	background-color: var(--background-color);
+	color: var(--body-color);
 	font-family: 'Anek Latin', sans-serif;
 }
 
@@ -40,11 +47,12 @@ h4 {
 }
 
 .grid div {
+/*background-color: rgba(0, 0, 0, 0.04);*/
 
 }
 
 #logo a {
-	color: #000;
+	color: var(--body-color);
 	text-decoration: none;
 	display: flex;
 	width: 100%;
@@ -61,7 +69,7 @@ h4 {
 /*NAV*/
 
 #nav a { 
-color: #333;
+color: var(--body-color);
 font-weight: 300; 
 letter-spacing: 2px; 
 text-decoration-color: transparent; 
@@ -72,7 +80,7 @@ transition: text-decoration-color .3s ease-in-out;
 }
 
 #nav a:hover, #nav a.active  { 
-  text-decoration-color: #333;
+  text-decoration-color: var(--body-color);
 }
 
 #nav.active {
@@ -124,7 +132,7 @@ transition: text-decoration-color .3s ease-in-out;
   .hamburger.is-active .hamburger-inner,
   .hamburger.is-active .hamburger-inner::before,
   .hamburger.is-active .hamburger-inner::after {
-    background-color: #333; }
+    background-color: var(--body-color); }
 
 .hamburger-box {
   width: 24px;
@@ -139,7 +147,7 @@ transition: text-decoration-color .3s ease-in-out;
   .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
     width: 24px;
     height: 2px;
-    background-color: #333;
+    background-color: var(--body-color);
     border-radius: 0px;
     position: absolute;
     transition-property: transform;
@@ -181,8 +189,14 @@ transition: text-decoration-color .3s ease-in-out;
 	align-items: center;
 	height: 70vh;
 	  	}
-#work h3 {
+#work h3, #writings h3, #portfolio h3 {
+	letter-spacing: 1px;
 	margin-bottom: 2rem;
+}
+
+#work h3 a, #writings h3 a, #portfolio h3 a {
+	color: var(--body-color);
+	text-decoration: none;
 }
 
 .work-item {
@@ -191,7 +205,7 @@ transition: text-decoration-color .3s ease-in-out;
 	position: relative;
 	width: 100%;
 	padding-top: calc((1 / 1) * 100%);
-	background-color: #000;
+	background-color: var(--body-color);
 }
 
 .work-item .inner {
@@ -220,7 +234,7 @@ transition: text-decoration-color .3s ease-in-out;
 	opacity: 1;
 }
 
-/*.work-item img {
+.work-item img {
 	display: block;
 	position: absolute;
 	z-index: -1;
@@ -228,8 +242,62 @@ transition: text-decoration-color .3s ease-in-out;
 	left: 0;
 	width: 100%;
 	height: 100%;
-} */
+}
 
+.writing-item .date-holder {
+	margin-bottom: .25em;
+}
+
+.writing-item .date {
+	margin: 0;
+	font-size: .85 rem;
+	padding: 0 4px;
+	color: var(--background-color);
+	display: inline-block;
+	background-color: var(--body-color);
+}
+
+.writing-item h2 a {
+color: var(--body-color);
+text-decoration-color: transparent;
+transition: text-decoration-color .3s ease-in-out;
+}
+
+.writing-item h2 a:hover {
+	color: var(--body-color);
+	text-decoration-color: var(--body-color);
+}
+
+.writing-item p a {
+	color: var(--body-color);
+	text-decoration-color: var(--body-color);
+}
+
+/*Portfolio*/
+
+#portfolio {
+	margin-top: 2rem;
+}
+
+#portfolio .work-item {
+	padding-top: calc((9 / 16) * 100%);
+}
+
+#portfolio .work-item .inner .work-inside {
+	opacity: 1;
+}
+
+#portfolio p a {
+	color: var(--body-color);
+	text-decoration-color: var(--body-color);
+	transition: text-decoration-color .3s ease-in-out;
+}
+
+#portfolio p a:hover {
+	color: var(--body-color);
+	text-decoration-color: var(--body-color);
+	transition: text-decoration-color .3s ease-in-out;
+}
 /*Footer*/
 
 #footer {
